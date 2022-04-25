@@ -148,7 +148,8 @@ section {
   padding: 100px 0;
 }
 
-.about, .experience {
+.about,
+.experience {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -250,18 +251,19 @@ section {
   margin-bottom: 50px;
   padding-bottom: 20px;
 }
-.experience{
- background-color: #111;
- color: #fff;
+
+.experience {
+  background-color: #111;
+  color: #fff;
 }
 
-.experience-content{
+.experience-content {
   display: flex;
   justify-items: space-between;
-  align-items:center;
+  align-items: center;
 }
 
-.experience .experience-content .card{
+.experience .experience-content .card {
   width: calc(33%-20px);
   background: #222;
   text-align: center;
@@ -269,12 +271,22 @@ section {
   padding: 20px 25px;
   cursor: pointer;
   margin: 10px;
-  height:300px;
+  height: 300px;
   display: flex;
   justify-items: center;
-  align-items:center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
-.experience .experience-content .card2{
+
+.experience .experience-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.experience .experience-content .card:hover {
+  background: crimson;
+}
+
+.experience .experience-content .card2 {
   width: calc(33%-20px);
   background: #222;
   text-align: center;
@@ -282,7 +294,8 @@ section {
   padding: 20px 25px;
   cursor: pointer;
 }
-.experience .experience-content .card3{
+
+.experience .experience-content .card3 {
   width: calc(33%-20px);
   background: #222;
   text-align: center;
@@ -290,6 +303,40 @@ section {
   padding: 20px 25px;
   cursor: pointer;
 }
+
+.experience .experience-content .card i {
+  font-size: 50px;
+  color: crimson;
+  transition: all 0.3s ease;
+}
+
+.experience .experience-content .card:hover i {
+  color: #fff;
+}
+
+.experience .experience-content .card text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10 0 7;
+}
+/* SKILLS SECTION */
+.skills{
+  font-family: 'Poppins', sans-serif;
+}
+.skills .skill-content .column{
+  width: calc(50% - 30px);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* responsive media query */
 @media (min-width: 1300px) {
@@ -386,10 +433,12 @@ section {
     color: crimson;
     font-weight: 500;
   }
-  .experience-content{
+
+  .experience-content {
     flex-wrap: wrap;
   }
 }
+
 
 @media (max-width: 947px) {
   .menu-btn {
@@ -412,30 +461,69 @@ section {
     transition: all 0.3s ease;
 
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font: size 25px;
   }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }
+
   .home .home-content .text-3 {
     font-size: 35px;
   }
-  .about .about-content .column{
+
+  .about .about-content .column {
     width: 50%;
   }
-  .max-width
-  {
+
+  .max-width {
     max-width: 1300px;
     padding: 0 80px;
-    margin:auto;
+    margin: auto;
+  }
+
+  .experience .experience-content .card {
+    width: (50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@import (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-content .text2 {
+    font-size: 60px;
+  }
+
+  .home .home-content .text3 {
+    font: size 32px;
+  }
+
+  .home .home-content a {
+    font-size: 20px;
+  }
+
+  .experience .experience-content .card {
+    width: 100%;
+  }
+}
+
+@import (max-width: 500px) {
+  .home .home-content .text2 {
+    font-size: 50px;
   }
 }
